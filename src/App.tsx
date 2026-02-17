@@ -24,8 +24,8 @@ function App() {
         </p>
         <Button className='bg-auto'>Ver trailer</Button>
         <ButtonGroup className='gap-3'>
-          <Button onClick={() => setCount(count + 1)}>Incrementar</Button>
-          <Button onClick={() => setCount(count - 1)}>Decrementar</Button>
+          <Button onClick={() => setCount(count + 10)}>Incrementar</Button>
+          <Button onClick={() => setCount(count - 10)}>Decrementar</Button>
         </ButtonGroup>
     </div>
   )
