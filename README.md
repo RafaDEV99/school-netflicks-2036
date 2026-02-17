@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Netflicks 2036
 =======
 # React + TypeScript + Vite
@@ -74,4 +73,3 @@ export default defineConfig([
   },
 ])
 ```
->>>>>>> 3fa5272 (Initialized workspace with Firebase Studio)
