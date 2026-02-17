@@ -26,8 +26,6 @@ function App() {
         <ButtonGroup className='gap-3'>
           <Button onClick={() => setCount(count + 1)}>Incrementar</Button>
           <Button onClick={() => setCount(count - 1)}>Decrementar</Button>
-          <Button onClick={() => setCount(count / 2)}>Dividir</Button>
-          <Button onClick={() => setCount(count % 5)}>Modulo</Button>
         </ButtonGroup>
     </div>
   )
