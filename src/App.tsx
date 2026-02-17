@@ -22,6 +22,7 @@ function App() {
           Excepteur sint occaecat cupidatat non proident, 
           sunt in culpa qui officia deserunt mollit anim id est laborum."
         </p>
+        <img src="src/assets/Poster_Rafa.png" className='h-75'></img>
         <Button className='bg-auto'>Ver trailer</Button>
         <ButtonGroup className='gap-3'>
           <Button onClick={() => setCount(count + 1)}>Incrementar</Button>
