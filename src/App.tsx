@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-secondary'>
+    <div className='bg-secondary p-6'>
       <p>epic!</p>
     </div>
     <div className='grid gap-7 p-7 items-center justify-items-center'>
