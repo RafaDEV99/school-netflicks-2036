@@ -9,6 +9,10 @@ function App() {
   const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3"
 
   return (
+    <>
+    <div className='bg-secondary'>
+      <p>epic!</p>
+    </div>
     <div className='grid gap-7 p-7 items-center justify-items-center'>
         <h1 className='font-bold text-4xl'><a className='hover:animate-pulse text-primary underline underline-offset-2'>Netflicks</a> 2026</h1>
         <h2 className={`${classUnder} text-1xl`}>Mi vida entre códigos</h2>
@@ -29,6 +33,7 @@ function App() {
           <Button onClick={() => setCount(count - 1)}>Decrementar</Button>
         </ButtonGroup>
     </div>
+    </>
   )
 }
 
