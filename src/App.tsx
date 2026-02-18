@@ -16,6 +16,8 @@ function App() {
   console.log(count)
   const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3"
 
+  // NOTE: add more funtionality, like, pressing a button triggers something
+
   return (
     <>
     <div className='bg-secondary p-6 flex justify-between items-center'>
