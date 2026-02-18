@@ -24,7 +24,7 @@ function App() {
     <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
       <Avatar>
         <AvatarImage src='src/assets/react.svg' alt="@RafaDEV99"/>
-        <AvatarFallback>&gt;:3</AvatarFallback>
+        <AvatarFallback>:O</AvatarFallback>
       </Avatar>
     </div>
     <div className='grid gap-7 p-7 items-center justify-items-center'>
