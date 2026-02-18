@@ -17,6 +17,7 @@ function App() {
   const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3"
 
   // NOTE: add more funtionality, like, pressing a button triggers something
+  // Ok!!
 
   return (
     <>
