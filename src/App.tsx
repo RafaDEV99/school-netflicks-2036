@@ -42,6 +42,7 @@ function App() {
         <Button onClick={() => setCount(count + 1)}>Incrementar</Button>
         <Button onClick={() => setCount(count - 1)}>Decrementar</Button>
       </ButtonGroup>
+      <p className="test">Colorido!!</p>
     </div>
     </>
   )
