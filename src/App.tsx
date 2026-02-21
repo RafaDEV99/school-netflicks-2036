@@ -26,14 +26,14 @@ function App() {
 
   return (
     <>
-    <div className='bg-secondary p-6 flex justify-between items-center'>
+    <div className='bg-secondary p-6 flex justify-between items-center animate-in fade-in zoom-in-95 duration-700'>
     <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
       <Avatar>
         <AvatarImage src='src/assets/react.svg' alt="@RafaDEV99"/>
         <AvatarFallback>:O</AvatarFallback>
       </Avatar>
     </div>
-    <div className='grid gap-7 p-7 items-center justify-items-center'>
+    <div className='grid gap-7 p-7 items-center justify-items-center animate-in fade-in zoom-in-95 duration-750'>
       <h1 className='font-bold text-4xl'><a className='hover:animate-pulse text-primary underline underline-offset-2'>Netflicks</a> 2026</h1>
 
       <h2 className={`${classUnder} text-1xl`}>Mi vida entre códigos</h2>
