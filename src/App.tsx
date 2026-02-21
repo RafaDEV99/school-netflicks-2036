@@ -4,20 +4,25 @@ import "./index.css"
 import { ButtonGroup } from './components/ui/button-group'
 import {
   Avatar,
-  AvatarBadge,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarGroupCount,
   AvatarImage,
+  AvatarFallback,
 } from "@/components/ui/avatar"
 
 function App() {
   const [count, setCount] = useState(10)
-  console.log(count)
   const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3"
 
-  // NOTE: add more funtionality, like, pressing a button triggers something
-  // Ok!!
+  const randomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  const fromColor = randomColor();
+  const toColor = randomColor();
 
   return (
     <>
@@ -42,7 +47,12 @@ function App() {
         <Button onClick={() => setCount(count + 1)}>Incrementar</Button>
         <Button onClick={() => setCount(count - 1)}>Decrementar</Button>
       </ButtonGroup>
-      <p className="test">Colorido!!</p>
+      <p 
+        className="text-transparent bg-clip-text hide"
+        style={{
+            backgroundImage: `linear-gradient(to right, ${fromColor}, ${toColor})`,
+        }}
+      >Colorido!!</p>
     </div>
     </>
   )
