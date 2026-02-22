@@ -12,18 +12,6 @@ function App() {
   const [count, setCount] = useState(10)
   const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3"
 
-  const randomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
-
-  const fromColor = randomColor();
-  const toColor = randomColor();
-
   return (
     <>
     <div className='bg-secondary p-6 flex justify-between items-center animate-in fade-in zoom-in-95 duration-700'>
