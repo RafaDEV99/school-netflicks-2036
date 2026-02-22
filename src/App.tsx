@@ -15,7 +15,7 @@ function App() {
   return (
     <>
     <div className='bg-secondary p-6 flex justify-between items-center animate-in fade-in zoom-in-95 duration-700'>
-    <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
+      <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
       <Avatar>
         <AvatarImage src='src/assets/react.svg' alt="@RafaDEV99"/>
         <AvatarFallback>:O</AvatarFallback>
