@@ -48,10 +48,7 @@ function App() {
         <Button onClick={() => setCount(count - 1)}>Decrementar</Button>
       </ButtonGroup>
       <p 
-        className="text-transparent bg-clip-text"
-        style={{
-            backgroundImage: `linear-gradient(to right, ${fromColor}, ${toColor})`,
-        }}
+        className="bg-linear-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent"
       >Colorido!!</p>
     </div>
     </>
