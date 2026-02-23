@@ -15,13 +15,13 @@ function App() {
 
   return (
     <>
-    <div className='bg-secondary p-6 flex text-sm justify-between items-center animate-in fade-in zoom-in-95 duration-700'>
+    <div className='bg-secondary p-6 flex text-sm justify-center items-center gap-6 animate-in fade-in zoom-in-95 duration-700 h-20'>
       <Avatar>
-        <AvatarImage src='src/assets/react.svg' alt="@RafaDEV99"/>
+        <AvatarImage src='src/assets/netflix-icon.svg' alt="@RafaDEV99"/>
         <AvatarFallback>:O</AvatarFallback>
       </Avatar>
-      <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
       <Separator orientation='vertical'/>
+      <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
 
     </div>
     <div className='grid gap-7 p-7 items-center justify-items-center animate-in fade-in zoom-in-95 duration-750'>
