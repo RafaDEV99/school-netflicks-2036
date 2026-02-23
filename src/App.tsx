@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { Button } from './components/ui/button'
 import "./index.css"
-import { ButtonGroup } from './components/ui/button-group'
+import { ButtonGroup, ButtonGroupSeparator } from './components/ui/button-group'
 import {
   Avatar,
   AvatarImage,
   AvatarFallback,
 } from "@/components/ui/avatar"
+import { Separator } from '@/components/ui/separator'
 
 function App() {
   const [count, setCount] = useState(10)
@@ -14,12 +15,14 @@ function App() {
 
   return (
     <>
-    <div className='bg-secondary p-6 flex justify-between items-center animate-in fade-in zoom-in-95 duration-700'>
-      <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
+    <div className='bg-secondary p-6 flex text-sm justify-between items-center animate-in fade-in zoom-in-95 duration-700'>
       <Avatar>
         <AvatarImage src='src/assets/react.svg' alt="@RafaDEV99"/>
         <AvatarFallback>:O</AvatarFallback>
       </Avatar>
+      <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
+      <Separator orientation='vertical'/>
+
     </div>
     <div className='grid gap-7 p-7 items-center justify-items-center animate-in fade-in zoom-in-95 duration-750'>
       <h1 className='font-bold text-4xl'><a className='hover:animate-pulse text-primary underline underline-offset-2'>Netflicks</a> 2026</h1>
