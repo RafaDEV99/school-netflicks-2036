@@ -8,7 +8,11 @@ import {
   AvatarFallback,
 } from "@/components/ui/avatar"
 import { Separator } from '@/components/ui/separator'
-import { HomeIcon, SearchIcon, StarIcon } from 'lucide-react'
+import { 
+  HomeIcon,
+  SearchIcon,
+  StarIcon,
+} from 'lucide-react'
 
 function App() {
   const [count, setCount] = useState(10)
