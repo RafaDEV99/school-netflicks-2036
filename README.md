@@ -4,7 +4,10 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 This is a school project practice with HTML and other technologies. This project and its branches are going to be evaluated by a teacher, 
-so don´t put stupid things in the main project!!!!
+so don´t put stupid things in the main project!
+
+> [!NOTE]
+> The Assets folder is located in ALWAYS in the src folder (As a little reminder)
 
 Currently, two official plugins are available:
 
