@@ -4,7 +4,10 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 This is a school project practice with HTML and other technologies. This project and its branches are going to be evaluated by a teacher, 
-so don´t put stupid things in the main project!!!!
+so don´t put stupid things in the main project!
+
+> [!NOTE]
+> The Assets folder is located in ALWAYS in the src folder (As a little reminder)
 
 Currently, two official plugins are available:
 
@@ -13,7 +16,7 @@ Currently, two official plugins are available:
 
 ## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The React Compiler is not enabled on this template due to its impact on dev & build performance. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
 ## Expanding the ESLint configuration
 
