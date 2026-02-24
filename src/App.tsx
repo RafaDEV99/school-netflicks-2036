@@ -15,7 +15,7 @@ function App() {
   const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3"
 
   return (
-    <>
+    <div className='p-2.5'>
     <div className='bg-secondary rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6 animate-in fade-in zoom-in-95 duration-700 h-20'>
       <Avatar>
         <AvatarImage src='src/assets/netflix-icon.svg' alt="@RafaDEV99"/>
@@ -61,7 +61,7 @@ function App() {
         className="bg-linear-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent"
       >Colorido!!</p>
     </div>
-    </>
+    </div>
   )
 }
 
