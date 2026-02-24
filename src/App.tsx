@@ -51,7 +51,7 @@ function App() {
         "El exelente documental sobre Rafael Tangyan ha salido!
         Descubre sobre como el futuro le dío la verdad a Rafael y le cambio por siempre y de verdad"
       </p>
-      <img src="src/assets/Poster_Rafa.png" className='h-75'></img>
+      <img src="src/assets/Poster_Rafa.png" className='h-75' alt='Movie poster'></img>
       <Button className='bg-auto'>Ver trailer</Button>
       <ButtonGroup className='gap-3'>
         <Button onClick={() => setCount(count + 1)}>Incrementar</Button>
