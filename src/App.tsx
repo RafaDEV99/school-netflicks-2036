@@ -20,7 +20,7 @@ function App() {
         <AvatarImage src='src/assets/netflix-icon.svg' alt="@RafaDEV99"/>
         <AvatarFallback>:O</AvatarFallback>
       </Avatar>
-      <Separator orientation='vertical'/>
+      <Separator orientation='vertical' className="bg-primary"/>
       <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
 
     </div>
