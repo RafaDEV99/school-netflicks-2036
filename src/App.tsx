@@ -50,7 +50,7 @@ function App() {
     </div>
     <div className='grid gap-7 p-7 items-center justify-items-center animate-in fade-in zoom-in-95 duration-750'>
       <h1 className='font-bold text-4xl'><a className='hover:animate-pulse text-primary underline underline-offset-2'>Netflicks</a> 2026</h1>
-      <h2 className={`${classUnder} text-2xl`}>Mi vida entre códigos</h2>
+      <h2 className={`${classUnder} text-1.8xl`}>Mi vida entre códigos</h2>
       <p>
         "El exelente documental sobre Rafael Tangyan ha salido!
         Descubre sobre como el futuro le dío la verdad a Rafael y le cambio por siempre y de verdad"
