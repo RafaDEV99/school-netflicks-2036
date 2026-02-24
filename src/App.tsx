@@ -23,7 +23,7 @@ function App() {
       </Avatar>
       <Separator orientation='vertical' className="bg-primary"/>
 
-      <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>Epic!</h1>
+      <h1 className='font-bold text-4xl animate-pulse text-primary underline underline-offset-2'>EpicNet!</h1>
       
       <Separator orientation='vertical' className="bg-primary"/>
       <ButtonGroup>
