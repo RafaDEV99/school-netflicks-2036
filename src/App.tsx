@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Button } from './components/ui/button'
 import "./index.css"
-import { ButtonGroup, ButtonGroupSeparator } from './components/ui/button-group'
+import { ButtonGroup } from './components/ui/button-group'
 import {
   Avatar,
   AvatarImage,
