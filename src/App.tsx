@@ -71,7 +71,8 @@ function App() {
       <h2 className={`${classUnder} text-1.8xl`}>Mi vida entre códigos</h2>
       <p>
         "El <a className='underline decoration-primary'>exelente documental</a> sobre Rafael Tangyan ha salido!
-        Descubre sobre como el futuro le dío la verdad a Rafael y le cambio por siempre y de verdad"
+        Descubre sobre como el futuro le dío la verdad a Rafael y le cambio por siempre y de verdad. 
+        En esta historia veremos muchas cosas sobre su pasado y daremos un pequeño repaso sobre su vida actual."
       </p>
       <img width={300} height={300} src={PosterRafa}></img>
       <Button className='bg-auto'>
