@@ -31,7 +31,7 @@ function App() {
   console.log(count)
 
   return (
-    <div className='p-3.5'>
+    <div className='p-3.5 underline-offset-5'>
 
     <CursorProvider>
       <Cursor />
@@ -70,7 +70,7 @@ function App() {
       <h1 className='font-bold text-4xl'><a className='hover:animate-pulse text-primary underline underline-offset-2'>Netflicks</a> 2026</h1>
       <h2 className={`${classUnder} text-1.8xl`}>Mi vida entre códigos</h2>
       <p>
-        "El exelente documental sobre Rafael Tangyan ha salido!
+        "El <a className='underline decoration-primary'>exelente documental</a> sobre Rafael Tangyan ha salido!
         Descubre sobre como el futuro le dío la verdad a Rafael y le cambio por siempre y de verdad"
       </p>
       <img width={300} height={300} src={PosterRafa}></img>
