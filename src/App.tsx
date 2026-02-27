@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button } from './components/ui/button'
+import { Button } from './components/animate-ui/components/buttons/button'
 import "./index.css"
 import { ButtonGroup, ButtonGroupSeparator } from './components/ui/button-group'
 import {
@@ -16,7 +16,14 @@ import {
   StarIcon,
   VideoIcon,
 } from 'lucide-react'
-import {}
+import PosterRafa from './assets/Poster_Rafa.png'
+import NetflixIcon from './assets/netflix-icon.svg'
+import {
+  Cursor,
+  CursorFollow,
+  CursorProvider,
+  type CursorFollowProps,
+} from '@/components/animate-ui/components/animate/cursor';
 
 function App() {
   const [count, setCount] = useState(10)
@@ -25,9 +32,10 @@ function App() {
 
   return (
     <div className='p-3.5'>
+
     <div className='bg-secondary rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6 animate-in fade-in zoom-in-95 duration-700 h-20'>
       <Avatar>
-        <AvatarImage src='src/assets/netflix-icon.svg' alt="@RafaDEV99"/>
+        <AvatarImage src={NetflixIcon} alt="@RafaDEV99"/>
         <AvatarFallback>:O</AvatarFallback>
       </Avatar>
       <Separator orientation='vertical' className="bg-primary"/>
@@ -60,22 +68,28 @@ function App() {
         "El exelente documental sobre Rafael Tangyan ha salido!
         Descubre sobre como el futuro le dío la verdad a Rafael y le cambio por siempre y de verdad"
       </p>
-      <img src="src/assets/Poster_Rafa.png" className='h-75' alt='Movie poster'></img>
+      <img width={300} height={300} src={PosterRafa}></img>
       <Button className='bg-auto'>
         <VideoIcon />
         Ver trailer
       </Button>
       <ButtonGroup>
-        <motion.Button initial={false} animate={{ scale: 1 }} onClick={() => setCount(count + 1)}>
+        <Button onClick={() => setCount(count + 1)}>
           <PlusIcon />
           Incrementar
-        </motion.Button>
+        </Button>
         <ButtonGroupSeparator />
         <Button onClick={() => setCount(count - 1)}>
           <MinusIcon />
           Decrementar
         </Button>
       </ButtonGroup>
+
+      <CursorProvider>
+        <Cursor />
+        <CursorFollow>Netflicks is cool!</CursorFollow>
+      </CursorProvider>
+
       <p 
         className="bg-linear-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent"
       >Colorido!!</p>
