@@ -22,7 +22,6 @@ import {
   Cursor,
   CursorFollow,
   CursorProvider,
-  type CursorFollowProps,
 } from '@/components/animate-ui/components/animate/cursor';
 
 function App() {
