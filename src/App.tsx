@@ -16,6 +16,7 @@ import {
   StarIcon,
   VideoIcon,
 } from 'lucide-react'
+import {}
 
 function App() {
   const [count, setCount] = useState(10)
@@ -65,10 +66,10 @@ function App() {
         Ver trailer
       </Button>
       <ButtonGroup>
-        <Button onClick={() => setCount(count + 1)}>
+        <motion.Button initial={false} animate={{ scale: 1 }} onClick={() => setCount(count + 1)}>
           <PlusIcon />
           Incrementar
-        </Button>
+        </motion.Button>
         <ButtonGroupSeparator />
         <Button onClick={() => setCount(count - 1)}>
           <MinusIcon />
