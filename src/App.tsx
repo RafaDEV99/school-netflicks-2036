@@ -24,11 +24,21 @@ import {
   CursorProvider,
 } from '@/components/animate-ui/components/animate/cursor';
 
-function App() {
-  const [count, setCount] = useState(10)
-  const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3"
-  console.log(count)
+import { motion } from "motion/react"
 
+function App() {
+  const [count, setCount] = useState(10);
+  const classUnder = "font-bold animate-bounce transition duration-350 text-primary gap-3";
+
+  const [starButton, setStarButton] = useState(false);
+
+  if (starButton)
+  {
+    console.log("Epic!");
+    console.log(count);
+    setStarButton(false)
+  }
+  
   return (
     <div className='p-3.5 underline-offset-5'>
 
@@ -58,7 +68,7 @@ function App() {
           Buscar
         </Button>
         <ButtonGroupSeparator />
-        <Button>
+        <Button onClick={() => setStarButton(true)}>
           <StarIcon />
           Reseñas
         </Button>
@@ -93,6 +103,16 @@ function App() {
       <p 
         className="bg-linear-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent"
       >Colorido!!</p>
+
+      <motion.div
+        drag
+        className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
+        whileDrag={{
+          scale: 1.1,
+          boxShadow: "0px 10px 20px rgba(0,0,0,0.2)"
+        }}
+      />
+
     </div>
     </div>
   )
