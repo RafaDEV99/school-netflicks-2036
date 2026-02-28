@@ -36,7 +36,7 @@ function App() {
   {
     console.log("Epic!");
     console.log(count);
-    setStarButton(false)
+    setStarButton(false);
   }
   
   return (
@@ -109,7 +109,13 @@ function App() {
         className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
         whileDrag={{
           scale: 1.1,
-          boxShadow: "0px 10px 20px rgba(0,0,0,0.2)"
+          boxShadow: "0px 20px 40px rgba(0,0,0,120)"     
+        }}
+        dragConstraints={{
+          top: -window.matchMedia,
+          left: -window.matchMedia,
+          right: window.innerWidth,
+          bottom: window.innerWidth,
         }}
       />
 
