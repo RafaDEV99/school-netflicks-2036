@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Button } from './components/animate-ui/components/buttons/button'
 import "./index.css"
 import { ButtonGroup, ButtonGroupSeparator } from './components/ui/button-group'
@@ -24,7 +24,8 @@ import {
   CursorProvider,
 } from '@/components/animate-ui/components/animate/cursor';
 
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import useWindowDimensions from "./GetWindowsSize";
 
 function App() {
   const [count, setCount] = useState(10);
@@ -32,10 +33,13 @@ function App() {
 
   const [starButton, setStarButton] = useState(false);
 
+  const root = document.getElementById("root");
+  console.log(useWindowDimensions());
+  const constraintsRef = useRef(root);
+  console.log(count);
+
   if (starButton)
   {
-    console.log("Epic!");
-    console.log(count);
     setStarButton(false);
   }
   
@@ -83,7 +87,7 @@ function App() {
         Descubre sobre como el futuro le dío la verdad a Rafael y le cambio por siempre y de verdad. 
         En esta historia veremos muchas cosas sobre su pasado y daremos un pequeño repaso sobre su vida actual."
       </p>
-      <img width={300} height={300} src={PosterRafa}></img>
+      <img width={300} height={300} src={PosterRafa} alt="Movie Poster"></img>
       <Button className='bg-auto'>
         <VideoIcon />
         Ver trailer
@@ -108,16 +112,19 @@ function App() {
         drag
         className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
         whileDrag={{
-          scale: 1.1,
+          scale: 1.2,
           boxShadow: "0px 20px 40px rgba(0,0,0,120)"     
         }}
-        dragConstraints={{
-          top: -window.matchMedia,
-          left: -window.matchMedia,
-          right: window.innerWidth,
-          bottom: window.innerWidth,
+        dragConstraints={constraintsRef}
+        whileTap={{
+          scale: 1.2
         }}
-      />
+        transition={{
+          type: "spring",
+          stiffness: 700,
+          damping: 30,
+        }}
+        />
 
     </div>
     </div>
