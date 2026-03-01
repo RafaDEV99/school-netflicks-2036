@@ -33,9 +33,9 @@ function App() {
 
   const [starButton, setStarButton] = useState(false);
 
-  const root = document.getElementById("root");
+  const rootObject = document.getElementById("root");
   console.log(useWindowDimensions());
-  const constraintsRef = useRef(root);
+  const constraintsRef = useRef(rootObject);
   console.log(count);
 
   if (starButton)
@@ -44,7 +44,7 @@ function App() {
   }
   
   return (
-    <div className='p-3.5 underline-offset-5'>
+    <div className='p-3.5 underline-offset-5' id="rootDiv">
 
     <CursorProvider>
       <Cursor />
