@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import React from 'react'
 import { Button } from './components/animate-ui/components/buttons/button'
 import "./index.css"
 import { ButtonGroup, ButtonGroupSeparator } from './components/ui/button-group'
@@ -26,6 +27,16 @@ import {
 
 import { motion } from "motion/react";
 import useWindowDimensions from "./GetWindowsSize";
+
+export class Example extends React.Component {
+  componentWillMount() {
+    alert('component is about to mount!');
+  }
+
+  render() {
+    return <h1>Hello world</h1>;
+  }
+}
 
 function App() {
   const [count, setCount] = useState(10);
@@ -119,7 +130,7 @@ function App() {
         whileTap={{
           scale: 1.2
         }}
-        />
+      />
 
     </div>
     </div>
