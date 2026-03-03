@@ -64,7 +64,7 @@ function App() {
 
     <div className='bg-secondary rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6 animate-in fade-in zoom-in-95 duration-700 h-20'>
       <Avatar>
-        <AvatarImage src={NetflixIcon} alt="@RafaDEV99"/>
+        <AvatarImage src={NetflixIcon} alt="@Netflicks"/>
         <AvatarFallback>:O</AvatarFallback>
       </Avatar>
       <Separator orientation='vertical' className="bg-primary"/>
