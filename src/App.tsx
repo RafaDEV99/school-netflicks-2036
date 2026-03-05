@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, type ReactElement } from 'react'
 import React from 'react'
 import { Button } from './components/animate-ui/components/buttons/button'
 import "./index.css"
@@ -28,14 +28,30 @@ import {
 import { motion, spring } from "motion/react";
 import useWindowDimensions from "./GetWindowsSize";
 
-export class Example extends React.Component {
-  componentWillMount() {
-    alert('component is about to mount!');
-  }
+function getRandomArbitrary(min: number, max: number) {
+  return Math.random() * (max - min) + min;
+}
 
-  render() {
-    return <h1>Hello world</h1>;
-  }
+function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
+  const rootObject = document.getElementById("root");
+  const constraintsRef = useRef(rootObject);
+  return (
+    <motion.div
+    drag
+    className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
+    whileDrag={{
+      scale: 1.2,
+      scaleY: 1,
+      boxShadow: "0px 20px 40px rgba(0,0,0,120)"     
+    }}
+    dragConstraints={constraintsRef}
+    whileTap={{
+      scale: 1.2,
+      scaleY: 0.6,
+      transition: {type: spring, stiffness: 500, damping: 5}
+    }}
+  />
+  )
 }
 
 function App() {
@@ -119,21 +135,7 @@ function App() {
         className="bg-linear-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent"
       >Colorido!!</p>
 
-      <motion.div
-        drag
-        className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
-        whileDrag={{
-          scale: 1.2,
-          scaleY: 1,
-          boxShadow: "0px 20px 40px rgba(0,0,0,120)"     
-        }}
-        dragConstraints={constraintsRef}
-        whileTap={{
-          scale: 1.2,
-          scaleY: 0.6,
-          transition: {type: spring, stiffness: 500, damping: 3}
-        }}
-      />
+      <SprigBox />
 
     </div>
     </div>
