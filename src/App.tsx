@@ -16,6 +16,7 @@ import {
   SearchIcon,
   StarIcon,
   VideoIcon,
+  X,
 } from 'lucide-react'
 import PosterRafa from './assets/Poster_Rafa.png'
 import NetflixIcon from './assets/netflix-icon.svg'
@@ -25,7 +26,7 @@ import {
   CursorProvider,
 } from '@/components/animate-ui/components/animate/cursor';
 
-import { motion } from "motion/react";
+import { motion, spring } from "motion/react";
 import useWindowDimensions from "./GetWindowsSize";
 
 export class Example extends React.Component {
@@ -124,11 +125,14 @@ function App() {
         className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
         whileDrag={{
           scale: 1.2,
+          scaleY: 1,
           boxShadow: "0px 20px 40px rgba(0,0,0,120)"     
         }}
         dragConstraints={constraintsRef}
         whileTap={{
-          scale: 1.2
+          scale: 1.2,
+          scaleY: 0.6,
+          transition: {type: spring, stiffness: 500, damping: 1}
         }}
       />
 
