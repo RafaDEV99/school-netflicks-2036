@@ -16,7 +16,6 @@ import {
   SearchIcon,
   StarIcon,
   VideoIcon,
-  X,
 } from 'lucide-react'
 import PosterRafa from './assets/Poster_Rafa.png'
 import NetflixIcon from './assets/netflix-icon.svg'
