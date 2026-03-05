@@ -132,7 +132,7 @@ function App() {
         whileTap={{
           scale: 1.2,
           scaleY: 0.6,
-          transition: {type: spring, stiffness: 500, damping: 1}
+          transition: {type: spring, stiffness: 500, damping: 3}
         }}
       />
 
