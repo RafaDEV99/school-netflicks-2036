@@ -38,17 +38,26 @@ function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <motion.div
     drag
+    animate= {{
+      translateX: 90,
+      translateY: -100,
+    }}
     className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
     whileDrag={{
       scale: 1.2,
       scaleY: 1,
-      boxShadow: "0px 20px 40px rgba(0,0,0,120)"     
+      boxShadow: "0px 20px 40px rgba(0,0,0,120)"
     }}
     dragConstraints={constraintsRef}
     whileTap={{
       scale: 1.2,
       scaleY: 0.6,
-      transition: {type: spring, stiffness: 500, damping: 5}
+      transition: {
+        type: spring,
+        stiffness: 500,
+        damping: 5,
+        bounce: 0.5,
+      }
     }}
   />
   )
@@ -62,7 +71,6 @@ function App() {
 
   const rootObject = document.getElementById("root");
   console.log(useWindowDimensions());
-  const constraintsRef = useRef(rootObject);
   console.log(count);
 
   if (starButton)
