@@ -1,4 +1,4 @@
-import { useState, useRef, type ReactElement } from 'react'
+import { useState, useRef } from 'react'
 import React from 'react'
 import { Button } from './components/animate-ui/components/buttons/button'
 import "./index.css"
@@ -32,16 +32,16 @@ import useWindowDimensions from "./GetWindowsSize";
 //  return Math.random() * (max - min) + min;
 // }
 
-function SprigBox({ className, ...props }: React.ComponentProps<"img">) {
+function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
   const rootObject = document.getElementById("root");
   const constraintsRef = useRef(rootObject);
   return (
-    <motion.image
+    <motion.div
     drag
-    animate= {{
-      translateX: 90,
-      translateY: -100,
-    }}
+    // animate= {{
+    //  translateX: 90,
+    //  translateY: -100,
+    // }}
     className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
     whileDrag={{
       scale: 1.2,
@@ -59,7 +59,9 @@ function SprigBox({ className, ...props }: React.ComponentProps<"img">) {
         bounce: 0.5,
       }
     }}
-  />
+  >
+    <img width={50} height={50} src="src/assets/react.svg" alt="icon" />
+  </motion.div>
   )
 }
 
@@ -143,7 +145,7 @@ function App() {
         className="bg-linear-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent"
       >Colorido!!</p>
 
-      <SprigBox src='./' />
+      <SprigBox/>
 
     </div>
     </div>
