@@ -28,15 +28,15 @@ import {
 import { motion, spring } from "motion/react";
 import useWindowDimensions from "./GetWindowsSize";
 
-function getRandomArbitrary(min: number, max: number) {
-  return Math.random() * (max - min) + min;
-}
+// function getRandomArbitrary(min: number, max: number) {
+//  return Math.random() * (max - min) + min;
+// }
 
-function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
+function SprigBox({ className, ...props }: React.ComponentProps<"img">) {
   const rootObject = document.getElementById("root");
   const constraintsRef = useRef(rootObject);
   return (
-    <motion.div
+    <motion.image
     drag
     animate= {{
       translateX: 90,
@@ -69,7 +69,7 @@ function App() {
 
   const [starButton, setStarButton] = useState(false);
 
-  const rootObject = document.getElementById("root");
+  // const rootObject = document.getElementById("root");
   console.log(useWindowDimensions());
   console.log(count);
 
@@ -143,7 +143,7 @@ function App() {
         className="bg-linear-to-r from-indigo-500 to-pink-600 bg-clip-text text-transparent"
       >Colorido!!</p>
 
-      <SprigBox />
+      <SprigBox src='./' />
 
     </div>
     </div>
