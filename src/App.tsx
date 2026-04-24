@@ -28,10 +28,6 @@ import {
 import { motion, spring } from "motion/react";
 import useWindowDimensions from "./GetWindowsSize";
 
-// function getRandomArbitrary(min: number, max: number) {
-//  return Math.random() * (max - min) + min;
-// }
-
 function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
   const rootObject = document.getElementById("root");
   const constraintsRef = useRef(rootObject);
@@ -54,13 +50,13 @@ function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
       scaleY: 0.6,
       transition: {
         type: spring,
-        stiffness: 500,
+        stiffness: 1000,
         damping: 5,
         bounce: 0.5,
       }
     }}
   >
-    <img width={50} height={50} src="src/assets/react.svg" alt="icon" />
+    <img width={50} height={50} draggable="false" src="https://picsum.photos/50" alt="icon" />
   </motion.div>
   )
 }
