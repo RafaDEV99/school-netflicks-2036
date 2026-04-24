@@ -67,7 +67,6 @@ function App() {
 
   const [starButton, setStarButton] = useState(false);
 
-  // const rootObject = document.getElementById("root");
   console.log(useWindowDimensions());
   console.log(count);
 
