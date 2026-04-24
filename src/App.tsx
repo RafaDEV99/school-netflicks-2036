@@ -38,7 +38,7 @@ function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
     //  translateX: 90,
     //  translateY: -100,
     // }}
-    className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-6 flex text-sm justify-center items-center gap-6'
+    className='bg-linear-40 from-primary to-indigo-500 rounded-l-lg rounded-r-lg p-3 flex text-sm justify-center items-center gap-6'
     whileDrag={{
       scale: 1.2,
       scaleY: 1,
@@ -56,7 +56,7 @@ function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
       }
     }}
   >
-    <img width={50} height={50} draggable="false" src="https://picsum.photos/50" alt="icon" />
+    <img draggable="false" src="https://picsum.photos/70" alt="icon" />
   </motion.div>
   )
 }
