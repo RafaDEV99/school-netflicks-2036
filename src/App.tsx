@@ -1,3 +1,4 @@
+// Main Frontend Imports
 import { useState, useRef } from 'react'
 import React from 'react'
 import { Button } from './components/animate-ui/components/buttons/button'
@@ -27,6 +28,8 @@ import {
 
 import { motion, spring } from "motion/react";
 import useWindowDimensions from "./GetWindowsSize";
+
+// #endregion
 
 function SprigBox({ className, ...props }: React.ComponentProps<"div">) {
   const rootObject = document.getElementById("root");
